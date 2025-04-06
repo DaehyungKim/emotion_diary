@@ -66,7 +66,7 @@ const Editor = ({ initData, onSubmit }) => {
                     <textarea placeholder="오늘은 어땠나요?" value={state.content} onChange={handleChangeContent}/>
                 </div>
             </div>
-            <div className="editor_section">
+            <div className="editor_section button_section">
                 <Button text={"취소하기"} onClick={handleOnGoBack} />
                 <Button text={"작성완료"} type={"positive"} onClick={handleSubmit} />
             </div>

@@ -1,28 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Nanum+Pen+Script&display=swap');
+
 .Button {
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 18px;
-    white-space: nowrap;
-    font-family: "Nanum Pen Script";
+  cursor: pointer;
+  border: none;
+  border-radius: 15px;
+  padding: 12px 24px;
+  font-size: 20px;
+  white-space: nowrap;
+  font-family: "Gaegu", "Nanum Pen Script", cursive;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+  transform-style: preserve-3d;
 }
 
+.Button:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
+}
+
+.Button:active {
+  transform: translateY(3px) scale(0.98);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.15);
+}
+
+.Button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: all 0.6s;
+  z-index: 1;
+}
+
+.Button:hover::before {
+  left: 100%;
+}
+
+.Button::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  bottom: -5px;
+  left: 0;
+  filter: blur(4px);
+  z-index: -1;
+}
+
+/* Default Button */
 .Button_default {
-    background-color: #ececec;
-    color: black;
+  background: linear-gradient(135deg, #f9f9f9, #ececec);
+  color: #333;
+  border: 2px solid #dadada;
 }
 
+.Button_default:hover {
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  border-color: #bcbcbc;
+}
+
+/* Positive Button */
 .Button_positive {
-    background-color: #64c964;
-    color: white;
+  background: linear-gradient(135deg, #7de87d, #64c964);
+  color: white;
+  border: 2px solid #56bb56;
 }
 
+.Button_positive:hover {
+  background: linear-gradient(135deg, #8fef8f, #72d672);
+  border-color: #64c964;
+}
+
+.Button_positive::before {
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.4) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Negative Button */
 .Button_negative {
-    background-color: #fd565f;
-    color: white;
+  background: linear-gradient(135deg, #ff7078, #fd565f);
+  color: white;
+  border: 2px solid #e84950;
 }
 
+.Button_negative:hover {
+  background: linear-gradient(135deg, #ff848c, #ff6b73);
+  border-color: #fd565f;
+}
+
+.Button_negative::before {
+  background: linear-gradient(
+    90deg, 
+    rgba(255, 255, 255, 0) 0%, 
+    rgba(255, 255, 255, 0.3) 50%, 
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* Add button animations */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+
+
+
+.Button[data-emoji] {
+  padding-right: 40px;
+}
+
+/* Add doodle style option */
+.Button.doodle {
+  border: 2px dashed;
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+.Button_default.doodle {
+  border-color: #999;
+  color: #555;
+}
+
+.Button_positive.doodle {
+  border-color: #64c964;
+  color: #64c964;
+}
+
+.Button_negative.doodle {
+  border-color: #fd565f;
+  color: #fd565f;
+}
+
+.Button.doodle:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}

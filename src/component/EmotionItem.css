@@ -45,7 +45,7 @@
 .EmotionItem_on5 img { animation-delay: 0.8s; }
 
 .EmotionItem span {
-    font-size: 18px;
+    font-size: 15px;
 }
 
 .EmotionItem_off {
@@ -53,26 +53,26 @@
 }
 
 .EmotionItem_on1 {
-    background-color: #64c964;
+    background: linear-gradient(135deg, #64c964, #4ead4e);
     color: white;
 }
 
 .EmotionItem_on2 {
-    background-color: #9dd772;
+    background: linear-gradient(135deg, #9dd772, #8bc561);
     color: white;
 }
 
 .EmotionItem_on3 {
-    background-color: #fdce17;
+    background: linear-gradient(135deg, #fdce17, #e5b800);
     color: white;
 }
 
 .EmotionItem_on4 {
-    background-color: #fd8446;
+    background: linear-gradient(135deg, #fd8446, #e57539);
     color: white;
 }
 
 .EmotionItem_on5 {
-    background-color: #fd565f;
+    background: linear-gradient(135deg, #fd565f, #e33d47);
     color: white;
 }
