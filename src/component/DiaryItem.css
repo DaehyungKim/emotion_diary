@@ -1,0 +1,114 @@
+.DiaryItem {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e2e2e2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.DiaryItem .img_section {
+    cursor: pointer;
+    min-width: 120px;
+    height: 80px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.DiaryItem .img_section:hover {
+    transform: scale(1.05);
+}
+
+.DiaryItem .img_section_1 {
+    background-color: #64c964;
+}
+
+.DiaryItem .img_section_2 {
+    background-color: #9dd772;
+}
+
+.DiaryItem .img_section_3 {
+    background-color: #fdce17;
+}
+
+.DiaryItem .img_section_4 {
+    background-color: #fd8446;
+}
+
+.DiaryItem .img_section_5 {
+    background-color: #fd565f;
+}
+
+.DiaryItem .img_section img {
+    width: 50%;
+    animation: swing 3s infinite ease-in-out;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* 각 감정별로 다른 애니메이션 속도와 효과 적용 */
+.img_section_1 img {
+    animation-duration: 2.5s;
+}
+
+.img_section_2 img {
+    animation-duration: 3s;
+}
+
+.img_section_3 img {
+    animation-duration: 3.5s;
+}
+
+.img_section_4 img {
+    animation-duration: 4s;
+}
+
+.img_section_5 img {
+    animation-duration: 4.5s;
+}
+
+.DiaryItem .info_section {
+    flex-grow: 1;
+    margin-left: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.DiaryItem .info_section:hover {
+    transform: translateX(5px);
+}
+
+.DiaryItem .info_section .date_wrapper {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.DiaryItem .info_section .content_wrapper {
+    font-size: 18px;
+}
+
+.DiaryItem .button_section {
+    min-width: 70px;
+    display: flex;
+    align-items: center;
+}

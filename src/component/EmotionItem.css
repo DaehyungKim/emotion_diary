@@ -1,0 +1,78 @@
+.EmotionItem {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: content;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.EmotionItem:hover {
+    transform: scale(1.05);
+}
+
+.EmotionItem img {
+    width: 50%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+/* Add bounce animation to images */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.EmotionItem_off img {
+    filter: grayscale(80%);
+}
+
+.EmotionItem_on1 img, 
+.EmotionItem_on2 img, 
+.EmotionItem_on3 img, 
+.EmotionItem_on4 img, 
+.EmotionItem_on5 img {
+    animation: bounce 2s infinite;
+}
+
+/* Different timing for each emotion to create variety */
+.EmotionItem_on1 img { animation-delay: 0s; }
+.EmotionItem_on2 img { animation-delay: 0.2s; }
+.EmotionItem_on3 img { animation-delay: 0.4s; }
+.EmotionItem_on4 img { animation-delay: 0.6s; }
+.EmotionItem_on5 img { animation-delay: 0.8s; }
+
+.EmotionItem span {
+    font-size: 18px;
+}
+
+.EmotionItem_off {
+    background-color: #ececec;
+}
+
+.EmotionItem_on1 {
+    background-color: #64c964;
+    color: white;
+}
+
+.EmotionItem_on2 {
+    background-color: #9dd772;
+    color: white;
+}
+
+.EmotionItem_on3 {
+    background-color: #fdce17;
+    color: white;
+}
+
+.EmotionItem_on4 {
+    background-color: #fd8446;
+    color: white;
+}
+
+.EmotionItem_on5 {
+    background-color: #fd565f;
+    color: white;
+}
